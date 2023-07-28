@@ -69,3 +69,4 @@ let jobs = ["IT","Freelancer","Worker","Bank","Labour","Bank","Bank"];
 
 console.log(new Set(jobs));
 console.log(...new Set(jobs));
+
