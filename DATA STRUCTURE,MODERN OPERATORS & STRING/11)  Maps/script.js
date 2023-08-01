@@ -77,6 +77,35 @@ rest.clear();
 
 
 
+
+console.log("########## MAP LOOP ###########");
+let resturent = {
+    name: "Halal",
+    booth: "mirpur,x,y,z,k",
+    waiter: "Hello,Hello2,Hello3,Hello4"
+}
+
+console.log("########## MAP LOOP (ENTRIES) ###########");
+let ResturentMapEntries = new Map(Object.entries(resturent));
+console.log(ResturentMapEntries);
+
+for (let [key, value] of ResturentMapEntries) {
+    console.log(`key: '${key}' and value: '${value}'`);
+}
+
+console.log("########## MAP LOOP (KEYS) ###########");
+// let ResturentMapKey = new Map(Object.values(resturent));
+// ResturentMapKey.set('room', '1,2,7,6,8');
+
+let ResturentMapKey = new Map((Object.keys(resturent))); // key or value separate method will not work,because The Map key expects both key and values. If I just give the key or just value then it will encounter an error. So,we have to use the entries for this case.
+
+for (let key of ResturentMapKey) {
+    console.log(key);
+}
+
+
+
+
 console.log("#################### MAP ITERABLE ######################");
 
 /**
@@ -128,5 +157,8 @@ for (let [key, value] of quizApp) {
         container.appendChild(optionBtn);
     }
 }
+
+
+
 
 

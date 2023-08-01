@@ -25,7 +25,7 @@
  */
 
 console.log("#################### SET ######################");
-let friends = new Set(["akash",'akash',"masud","zanin","masud","shahin","dihan","robin"]);
+let friends = new Set(["akash", 'akash', "masud", "zanin", "masud", "shahin", "dihan", "robin"]);
 console.log(friends);
 
 console.log("#################### Set (add) ######################");
@@ -53,7 +53,7 @@ console.log(`Size of the friends is : ${friends.size}`);
 
 console.log("#################### Set (Loop) ######################");
 
-for(let value of friends){
+for (let value of friends) {
     console.log(value);
 }
 
@@ -65,8 +65,47 @@ console.log(friends);
 
 console.log("#################### Set (spread) ######################");
 
-let jobs = ["IT","Freelancer","Worker","Bank","Labour","Bank","Bank"];
+let jobs = ["IT", "Freelancer", "Worker", "Bank", "Labour", "Bank", "Bank"];
 
 console.log(new Set(jobs));
 console.log(...new Set(jobs));
+
+console.log("######### Set (Object.entries/keys/values) ##########");
+
+let course = {
+    p1: "Udemy",
+    p2: "Coursera",
+
+    p2: "Coursera",
+    p4: "Youtube",
+    p4: "Youtube",
+    p4: "Youtube",
+    p7: "W3Schools",
+    p8: "Programmiz"
+}
+
+console.log(typeof (course));
+
+let courseEntries = new Set(Object.entries(course));
+console.log(courseEntries);
+for (const x of courseEntries) {
+    console.log(x);
+}
+
+
+let courseKeys = new Set(Object.keys(course));
+console.log(courseKeys);
+for (const key of courseKeys) {
+    console.log(`key : ${key}`);
+}
+
+
+let courseValues = new Set(Object.values(course));
+console.log(courseValues);
+for (const value of courseValues) {
+    console.log(`value : ${value}`);
+}
+
+
+
 
