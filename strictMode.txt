@@ -1,0 +1,21 @@
+JAVASCRIPT "use strict" ====>
+
+Using strict mode is recommended to avoid basic mistakes which can lead a bug in future.
+
+Benefits -> 
+
+i) Error Prevention: Strict mode helps catch common coding mistakes and potential bugs by raising silent errors to thrown exceptions. For example, assigning values to undeclared variables or using reserved keywords as variable names will throw errors in strict mode, preventing unintentional behavior.
+ii) Eliminates "this" coercion: In strict mode, the value of this remains unchanged when a function is not called as a method of an object, preventing accidental reference to the global object (window in browsers) and making the code more predictable.
+iii) Strict Variable Rules: In strict mode, variables must be declared with var, let, or const. It disallows the use of implicitly declared global variables and enhances scoping rules, reducing the chances of variable conflicts.
+iv) Prevents Octal Literal Syntax: Octal literals, like 0123, are not allowed in strict mode, as they can lead to confusion and bugs in code.
+v) Forbids Deleting Variables: In strict mode, you cannot delete variables, function names, or function arguments, which helps avoid unintended side effects and improves code readability.
+vi) Restricted eval() and arguments: strict mode restricts the usage of eval() to evaluate strings as code and prohibits the modification of the arguments object.
+
+Limitations : 
+i) Compatibility Issues: Some older JavaScript code or third-party libraries might not be compatible with strict mode. If you enable strict mode in your script, it could potentially break functionality in such cases.
+ii) Parsing Overhead: The JavaScript engine needs to perform additional checks and validations in strict mode, which may lead to slightly slower parsing and execution compared to non-strict mode code.
+iii) Unavailability in Older Browsers: Strict mode is supported in modern JavaScript environments, but if you need to support older browsers that don't fully support ECMAScript 5 (ES5), strict mode may not work as expected.
+
+Conclusion :
+
+Despite a few limitations, using "use strict" in JavaScript is generally recommended. It can significantly improve code quality, reduce errors, and make your codebase more maintainable. Just be cautious when using it in older projects or environments, and always thoroughly test your code to ensure it works as expected. In modern development, strict mode is widely used and has become a standard practice.
